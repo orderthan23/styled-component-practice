@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+//back-tik 사이에 들어가는 모든 문법은 css 여야함
+//styled 뒤에는 html의 태그종류만 입력가능
 const Father = styled.div`
   display: flex;
 `;
