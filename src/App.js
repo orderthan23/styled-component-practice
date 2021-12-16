@@ -19,19 +19,37 @@ const Circle = styled(Box)`
   border-radius: 50px;
 `;
 
-
 const Text = styled.span`
     color : white;
 `;
 
+// 버튼 타입으로 만든 스타일을 A 태그의 스타일로 사용하고 싶을 때 AS 키워드를 사용
+const Btn = styled.button`
+  color : white;
+  background-color : tomato;
+  border : 0;
+  border-radius : 15px;
+`;
+
+// styled component로 attr(속성) 정의하기
+const Input = styled.input.attrs({required : true, minLength : 10})`
+  background-color : tomato;
+`;
 
 function App() {
     return (
-        <Father>
-            <Box bgColor="teal">
+        <Father as="header">
+            {/* <Btn>Log in</Btn>
+            <Btn as="a" href="http://www.naver.com">Log in</Btn> */}
+            {/* <Box bgColor="teal">
                 <Text>Hello</Text>
             </Box>
-            <Circle bgColor="tomato"/>
+            <Circle bgColor="tomato"/> */}
+            <Input/>
+            <Input/>
+            <Input/>
+            <Input/>
+            <Input/>
         </Father>
     );
 }
